@@ -61,8 +61,8 @@ prompt = ChatPromptTemplate.from_template(template)
 
 # using gpt-3.5-turbo as our underlying model with temperature set to 0.2
 # temperature controls creativity, it's a value from 0 - 1
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.2)
-#llm = HuggingFaceHub(repo_id="mistralai/Mistral-7B-v0.1", huggingfacehub_api_token='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', model_kwargs={"temperature": 0.1, "max_length": 4096})
+#llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.2)
+llm = HuggingFaceHub(repo_id="mistralai/Mistral-7B-v0.1", huggingfacehub_api_token='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', model_kwargs={"temperature": 0.1, "max_length": 4096})
 
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
